@@ -4,7 +4,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
 import { createStore } from 'redux';
+import Amplify from 'aws-amplify';
+import awsmobile from './aws-exports';
 
+//Configure Amplify
+Amplify.configure(awsmobile);
 
 // ACTION INCREMENT DECREMENT
 const increment = () => {

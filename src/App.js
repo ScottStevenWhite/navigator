@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 
 class App extends Component {
   render() {
@@ -8,14 +9,15 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Test Automatic Deployment</h2>
+          <h2>Is Auth Working?</h2>
         </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Lets go!
         </p>
+		<AmplifySignOut />
       </div>
     );
   }
 }
 
-export default App;
+export default withAuthenticator(App);
